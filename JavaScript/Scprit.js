@@ -3,7 +3,6 @@ var classProduto = new Produto();
 
 window.addEventListener('load', function () {
 
-
     classProduto.atualizarTabela();
 
     this.document.getElementById('btnModalCadastrar').addEventListener('click', function () {

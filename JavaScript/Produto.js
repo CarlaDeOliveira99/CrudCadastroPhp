@@ -27,10 +27,7 @@ class Produto {
             .then(res => res.json())
             .then(resposta =>
                 resposta.forEach(element => {
-                    // this.arrayProduto.push(element);
-
                     let obj = element;
-
 
                     let tr = tbody.insertRow()
                     this.id = tr.insertCell()
@@ -180,160 +177,70 @@ class Produto {
     ordenarTabela(categoria, iconeSelecionado) {
 
         let listaProduto = this.dadosDaTabelaTr()
-        let atualizalistaProduto = ''
+        let mapeamentoDeCategoria = {
+            "Cód": "id",
+            "Produto": "descricao",
+            "Quantidade": "quantidade",
+            "Unidade": "unidade",
+            "Preço de Compra": "precoInicial",
+            "Preço de Venda": "precoFinal"
+        }
+        let propriedade = mapeamentoDeCategoria[categoria];
 
         switch (iconeSelecionado) {
             case 1:
-                if (categoria == "Cód") {
-                    atualizalistaProduto = listaProduto.sort(function (a, b) {
-                        if (a.id < b.id) {
-                            return -1;
-                        } else {
-                            return true;
-                        }
-                    });
-
-                    this.atualizarTabelaDeOrdenar(atualizalistaProduto)
-                    break;
-                } else if (categoria == "Produto") {
-                    atualizalistaProduto = listaProduto.sort(function (a, b) {
-                        if (a.descricao < b.descricao) {
-                            return -1;
-                        } else {
-                            return true;
-                        }
-                    });
-
-                    this.atualizarTabelaDeOrdenar(atualizalistaProduto)
-                    break;
-                } else if (categoria == "Quantidade") {
-                    atualizalistaProduto = listaProduto.sort(function (a, b) {
-                        if (a.quantidade < b.quantidade) {
-                            return -1;
-                        } else {
-                            return true;
-                        }
-                    });
-
-                    this.atualizarTabelaDeOrdenar(atualizalistaProduto)
-                    break;
-                } else if (categoria == "Unidade") {
-                    atualizalistaProduto = listaProduto.sort(function (a, b) {
-                        if (a.unidade < b.unidade) {
-                            return -1;
-                        } else {
-                            return true;
-                        }
-                    });
-
-                    this.atualizarTabelaDeOrdenar(atualizalistaProduto)
-                    break;
-                } else if (categoria == "Preço de Compra") {
-                    atualizalistaProduto = listaProduto.sort(function (a, b) {
-                        if (a.precoInicial < b.precoInicial) {
-                            return -1;
-                        } else {
-                            return true;
-                        }
-                    });
-
-                    this.atualizarTabelaDeOrdenar(atualizalistaProduto)
-                    break;
-                } else if (categoria == "Preço de Venda") {
-                    atualizalistaProduto = listaProduto.sort(function (a, b) {
-                        if (a.precoFinal < b.precoFinal) {
-                            return -1;
-                        } else {
-                            return true;
-                        }
-                    });
-                    this.atualizarTabelaDeOrdenar(atualizalistaProduto)
-                    break;
-                }
-
+                this.atualizarTabelaDeOrdenar(this.menorParaMaior(propriedade, listaProduto))
+                break;
             case 2:
-                if (categoria == "Cód") {
-                    atualizalistaProduto = listaProduto.sort(function (a, b) {
-                        if (a.id > b.id) {
-                            return -1;
-                        } else {
-                            return true;
-                        }
-                    });
-
-                    this.atualizarTabelaDeOrdenar(atualizalistaProduto)
-                    break;
-                } else if (categoria == "Produto") {
-                    atualizalistaProduto = listaProduto.sort(function (a, b) {
-                        if (a.descricao > b.descricao) {
-                            return -1;
-                        } else {
-                            return true;
-                        }
-                    });
-
-                    this.atualizarTabelaDeOrdenar(atualizalistaProduto)
-                    break;
-                } else if (categoria == "Quantidade") {
-                    atualizalistaProduto = listaProduto.sort(function (a, b) {
-                        if (a.quantidade > b.quantidade) {
-                            return -1;
-                        } else {
-                            return true;
-                        }
-                    });
-
-                    this.atualizarTabelaDeOrdenar(atualizalistaProduto)
-                    break;
-                } else if (categoria == "Unidade") {
-                    atualizalistaProduto = listaProduto.sort(function (a, b) {
-                        if (a.unidade > b.unidade) {
-                            return -1;
-                        } else {
-                            return true;
-                        }
-                    });
-                    break;
-                } else if (categoria == "Preço de Compra") {
-                    atualizalistaProduto = listaProduto.sort(function (a, b) {
-                        if (a.precoInicial > b.precoInicial) {
-                            return -1;
-                        } else {
-                            return true;
-                        }
-                    });
-
-                    this.atualizarTabelaDeOrdenar(atualizalistaProduto)
-                    break;
-                } else if (categoria == "Preço de Venda") {
-                    atualizalistaProduto = listaProduto.sort(function (a, b) {
-                        if (a.precoFinal > b.precoFinal) {
-                            return -1;
-                        } else {
-                            return true;
-                        }
-                    });
-
-                    this.atualizarTabelaDeOrdenar(atualizalistaProduto)
-                    break;
-                }
+                this.atualizarTabelaDeOrdenar(this.maiorParaMenor(propriedade, listaProduto))
+                break;
             case 3:
-                atualizalistaProduto = listaProduto.sort(function (a, b) {
-                    if (a.id < b.id) {
-                        return -1;
-                    } else {
-                        return true;
-                    }
-                });
-
-                this.atualizarTabelaDeOrdenar(atualizalistaProduto)
+                this.atualizarTabelaDeOrdenar(this.posicaoAtual("id", listaProduto))
                 break;
             default:
-                console.log('nao foi dessa vez');
+                console.log('nao foi dessa possível ordenar');
                 break;
         }
     }
 
+    menorParaMaior(categoria, produto) {
+        let atualizalistaProduto = ''
+        atualizalistaProduto = produto.sort(function (a, b) {
+            if (a[categoria] < b[categoria]) {
+                return -1;
+            } else {
+                return true;
+            }
+        });
+
+        return atualizalistaProduto;
+    }
+
+    maiorParaMenor(categoria, produto) {
+        let atualizalistaProduto = ''
+        atualizalistaProduto = produto.sort(function (a, b) {
+            if (a[categoria] > b[categoria]) {
+                return -1;
+            } else {
+                return true;
+            }
+        });
+
+        return atualizalistaProduto;
+    }
+
+    posicaoAtual(categoria, produto) {
+        let atualizalistaProduto = ''
+        atualizalistaProduto = produto.sort(function (a, b) {
+            if (a[categoria] < b[categoria]) {
+                return -1;
+            } else {
+                return true;
+            }
+        });
+
+        return atualizalistaProduto;
+    }
 
     dadosDaTabelaTr() {
 
@@ -361,8 +268,6 @@ class Produto {
     atualizarTabelaDeOrdenar(produto) {
         let tr = document.getElementsByClassName('trInfor')
 
-
-
         for (let i = 0; i < produto.length; i++) {
             let td = tr[i].childNodes;
 
@@ -374,8 +279,6 @@ class Produto {
             td[5].innerText = 'R$ ' + produto[i].precoFinal.toLocaleString('pt-BR', { minimumFractionDigits: 2 });;
 
         }
-
-
     }
 }
 
