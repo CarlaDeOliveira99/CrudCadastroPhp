@@ -51,16 +51,16 @@
     <div id="modalFundo" class="hide"></div><!--fundo so modal-->
     <div id="modal" class="hide"><!--modal-->
         <div class="modalHeader"><!--cabeçalho-->
-                <button type="button" id="btnModalFechar"><img src="icone/voltar.png" alt=""></button>
-                <h1>Cadastrar Produto</h1>
-                <div id="txtCadastro">
-                    <p><input id="campoID" type="hidden" name="id"></p>
-                    <p id="txtProduto">Produto <input id="campoProd" name="produto" type="text"></p>
-                    <span id="txtQuantidade">Quantidade <input id="quantidade" class="campoDados" name="quantidade" type="number" step="1" min="1"></span>
-                    <span id="txtUnidade">Unidade <input class="campoDados" id="unidade" name="unidade" type="text" min="0"></span>
-                    <p id="txtPrecoIni" class="txtPreco">Preço de Compra <input id="precoInicial" class="campoPreco" name="precoInicial" type="text" data-thousands="." data-decimal="," data-prefix="R$ "></p>
-                    <p id="txtPrecoFinal" class="txtPreco">Preço de Venda <input id="precoFinal" name="precoFinal" class="campoPreco" type="text" data-thousands="." data-decimal="," data-prefix="R$ "></p>
-                </div>
+            <button type="button" id="btnModalFechar"><img src="icone/voltar.png" alt=""></button>
+            <h1>Cadastrar Produto</h1>
+            <div id="txtCadastro">
+                <p><input id="campoID" type="hidden" name="id"></p>
+                <p id="txtProduto">Produto <input id="campoProd" name="produto" type="text"></p>
+                <span id="txtQuantidade">Quantidade <input id="quantidade" class="campoDados" name="quantidade" type="number" step="1" min="1"></span>
+                <span id="txtUnidade">Unidade <input class="campoDados" id="unidade" name="unidade" type="text" min="0"></span>
+                <p id="txtPrecoIni" class="txtPreco">Preço de Compra <input id="precoInicial" class="campoPreco" name="precoInicial" type="text" data-thousands="." data-decimal="," data-prefix="R$ "></p>
+                <p id="txtPrecoFinal" class="txtPreco">Preço de Venda <input id="precoFinal" name="precoFinal" class="campoPreco" type="text" data-thousands="." data-decimal="," data-prefix="R$ "></p>
+            </div>
 
         </div>
         <div id="modalCorpo"><!--corpo-->
@@ -69,30 +69,15 @@
         </div>
     </div>
 
-
-
-    <div id="modalFundoExcluir" class="esconder"></div><!--fundo so modal-->
-    <div id="modalExcluir" class="esconder"><!--modal-->
-        <div class="cabecalhoModalExcluir"><!--cabeçalho-->
-            <p><label for="tituloExcluir" id="tituloExcluir">Deseja Excluir?</label></p>
-            <p id="CampoDadosExcluir"> <label for="textoDoCampo" id="textoDoExcluir"></label></p>
-            <div id="botoesDoCampoExcluir">
-                <button type="button" class="btnDeExcluir" id="sim">Sim</button>
-                <button type="button" class="btnDeExcluir" id="nao">Não</button>
-            </div>
-        </div>
-
-
-        <script src="JavaScript/Produto.js" async defer></script>
-        <script src="JavaScript/ModalCadastro.js" async defer></script>
-        <script src="JavaScript/ModalExcluir.js" async defer></script>
-        <script src="JavaScript/Scprit.js" async defer></script>
-        <script src="JavaScript/Ordenar.js" async defer></script>
-        <script>
-            $(function() {
-                $(".campoPreco").maskMoney();
-            })
-        </script>
+    <script src="JavaScript/Produto.js" async defer></script>
+    <script src="JavaScript/ModalCadastro.js" async defer></script>
+    <script src="JavaScript/Scprit.js" async defer></script>
+    <script src="JavaScript/Ordenar.js" async defer></script>
+    <script>
+        $(function() {
+            $(".campoPreco").maskMoney();
+        })
+    </script>
 </body>
 
 </html>
