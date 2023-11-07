@@ -257,7 +257,7 @@ class Produto {
             produto.unidade = td[3].innerText
             let precoInicial = td[4].innerText.replace('R$', '').replace(',', '.');
             produto.precoInicial = parseFloat(precoInicial)
-            let precoFinal = td[4].innerText.replace('R$', '').replace(',', '.');
+            let precoFinal = td[5].innerText.replace('R$', '').replace(',', '.');
             produto.precoFinal = parseFloat(precoFinal)
 
             listaProduto.push(produto)
