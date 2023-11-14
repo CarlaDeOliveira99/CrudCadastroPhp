@@ -40,7 +40,7 @@ span{
 
 
 .btn {
-    background: #03bb85;
+    background: #c4dafa;
     color: #18191a;
     text-align: center;
     font-family: arial;
@@ -57,7 +57,7 @@ span{
 }
 
 .btn:hover {
-    background: #68ddbd;
+    background: #84b6f4;
     color: #18191a;
     cursor: pointer;
 }
@@ -202,8 +202,8 @@ h1 {
     font-weight: bold;
     letter-spacing: 1px;
     padding: 9.6px 19.2px;
-    background-color: #216b3a;
-    color: #ffffff;
+    background-color: #c4dafa;
+    color: #000000;
     border: none;
     border-radius: 13px;
     cursor: pointer;
@@ -221,7 +221,7 @@ h1 {
 
 .salvar:hover {
     opacity: 1;
-    background-color:#64c27b;
+    background-color:#84b6f4;
     color: #000000;
 }
 
