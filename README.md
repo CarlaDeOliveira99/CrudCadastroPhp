@@ -5,10 +5,18 @@ Este repositório tem como objetivo melhorar as habilidades em PHP e foi desenvo
 
 * [Caminho para acesso ao arquivo txt](dadosDaTabela/dados.txt)
 * [Cadastrar os dados](#Cadastrar-os-dados)
+* [Alterar os dados](#Alterar-os-dados)
 
 ## Cadastrar os dados
 <p>Para a tela de cadastro, foi utilizado um modal. Após clicar em ‘salvar’, os dados são salvos no arquivo txt. Em seguida, é utilizado o ‘fetch’ para exibir na tela os dados do arquivo txt</p>
 
 <img src="gifs e imagens do projeto/cadastrar-.gif" width="850">
+
+**[⬆ Inicio](#CrudCadastroPhp)**
+
+## Alterar os dados
+<p>Para alterar os dados da tabela, foi utilizado um ícone que, ao ser clicado, faz aparecer um modal com as informações da linha a serem alteradas. Após clicar em ‘Alterar’, as informações são também modificadas no arquivo txt</p>
+
+<img src="gifs e imagens do projeto/alterar.gif" width="850">
 
 **[⬆ Inicio](#CrudCadastroPhp)**
