@@ -8,6 +8,7 @@ Este repositório tem como objetivo melhorar as habilidades em PHP e foi desenvo
 * [Alterar os dados](#Alterar-os-dados)
 * [Deletar os dados](#Deletar-os-dados)
 * [Ordenar os dados da tabela](#Ordenar-os-dados-da-tabela)
+* [Pesquisar os dados da tabela](#Pesquisar-os-dados-da-tabela)
 
 ## Cadastrar os dados
 <p>Para a tela de cadastro, foi utilizado um modal. Após clicar em ‘salvar’, os dados são salvos no arquivo txt. Em seguida, é utilizado o ‘fetch’ para exibir na tela os dados do arquivo txt.</p>
@@ -31,8 +32,16 @@ Este repositório tem como objetivo melhorar as habilidades em PHP e foi desenvo
 **[⬆ Inicio](#CrudCadastroPhp)**
 
 ## Ordenar os dados da tabela
-<p>P</p>
+<p>A tabela permite ordenar cada coluna. Pode ser de forma crescente, decrescente ou em ordem alfabética.</p>
 
 <img src="gifs e imagens do projeto/ordenar.gif" width="850">
+
+**[⬆ Inicio](#CrudCadastroPhp)**
+
+
+## Pesquisar os dados da tabela
+<p>O campo de pesquisa destaca as palavras conforme são digitadas e traz as linhas que possuem as palavras pesquisadas. As demais são ocultadas.</p>
+
+<img src="gifs e imagens do projeto/pesquisar.gif" width="850">
 
 **[⬆ Inicio](#CrudCadastroPhp)**
