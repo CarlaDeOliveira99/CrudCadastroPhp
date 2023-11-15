@@ -29,3 +29,10 @@ Este repositório tem como objetivo melhorar as habilidades em PHP e foi desenvo
 <img src="gifs e imagens do projeto/excluir.gif" width="850">
 
 **[⬆ Inicio](#CrudCadastroPhp)**
+
+## Ordenar os dados da tabela
+<p>P</p>
+
+<img src="gifs e imagens do projeto/ordenar.gif" width="850">
+
+**[⬆ Inicio](#CrudCadastroPhp)**
