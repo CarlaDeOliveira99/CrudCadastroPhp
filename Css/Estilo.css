@@ -8,18 +8,6 @@ span{
     font-size: 14pt;
 }
 
-#anuciado {
-    display: grid;
-    justify-content: center;
-    margin: 0 auto;
-    color: #FFF;
-    text-align: justify;
-    font-family: Arial;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 35px;
-}
 
 #areaTabela {
     margin: 0 auto;

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title> Manipulação de tabela </title>
+    <title> Crud Cadastro </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="Css/Estilo.css">
@@ -14,12 +14,7 @@
 </head>
 
 <body>
-    <div>
-        <label for="anuciado" id="anuciado">Criar um grid de dados com as seguintes ações (adicionar linha, remover
-            linha, ordenar, e com um campo de pesquisa)</label>
-    </div>
-
-    <!-- Area acima da tabela onde possui os botões e barra de pesquisa -->
+      <!-- Area acima da tabela onde possui os botões e barra de pesquisa -->
     <div id="areaTabela">
         <div id="cabecalhoPesquisaAdicionar">
             <button class="btn" id="btnAdicionar">Adicionar</button>
