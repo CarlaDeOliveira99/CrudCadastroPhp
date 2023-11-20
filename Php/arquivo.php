@@ -48,7 +48,7 @@ function id($caminho)
 
 
 
-function coletarDados($produto, $quantidade, $unidade, $precoInicial, $precoFinal, $caminho, $jsonJS)
+function coletarDados( $caminho, $jsonJS)
 {
     $jsonJSArray = json_decode($jsonJS, true);
 
