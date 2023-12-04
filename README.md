@@ -11,7 +11,7 @@ Este repositório tem como objetivo melhorar as habilidades em PHP e foi desenvo
 * [Pesquisar os dados da tabela](#Pesquisar-os-dados-da-tabela)
 
 ## Cadastrar os dados
-<p>Para a tela de cadastro, foi utilizado um modal. Após clicar em ‘salvar’, os dados são salvos no arquivo txt. Em seguida, é utilizado o ‘fetch’ para exibir na tela os dados do arquivo txt</p>
+<p>Para a tela de cadastro, foi utilizado um modal. Após clicar em ‘salvar’, os dados são salvos no arquivo txt. Em seguida, é utilizado o ‘fetch’ para exibir na tela os dados do arquivo txt.</p>
 
 <img src="gifs e imagens do projeto/cadastrar-.gif" width="850">
 
